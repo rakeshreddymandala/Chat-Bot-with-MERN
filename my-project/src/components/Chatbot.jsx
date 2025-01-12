@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ChatArea from "./ChatArea";
-import InputArea from "./InputArea";
+import InputArea from "D:/react_basics/my-project/src/components/InputArea.jsx";
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
