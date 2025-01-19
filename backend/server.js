@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only this origin
+    origin: '*', // Allow only this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 }));
@@ -26,6 +26,7 @@ mongoose
 app.get('/', (req, res) => {
     res.send('Welcome to the Chatbot API!');
 });
+
 
 app.post('/api/chat/save-message', async (req, res) => {
     try {
